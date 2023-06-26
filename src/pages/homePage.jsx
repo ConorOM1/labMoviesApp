@@ -3,7 +3,7 @@ import PageTemplate from "../components/templateMovieListPage";
 import { getMovies } from "../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from "../components/spinner";
-import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
+import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
 
 const HomePage = (props) => {
   const { data, error, isLoading, isError } = useQuery("discover", getMovies);
