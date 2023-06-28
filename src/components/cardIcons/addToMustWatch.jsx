@@ -3,18 +3,18 @@ import { MoviesContext } from "../../contexts/moviesContext";
 import IconButton from "@mui/material/IconButton";
 import PlaylistIcon from "@mui/icons-material/PlaylistAdd";
 
-const PlaylistAddIcon = ({ movie }) => {
+const MustWatchAddIcon = ({ movie }) => {
   const context = useContext(MoviesContext);
 
   const onUserSelect = (e) => {
     e.preventDefault();
-    context.addToPlaylist(movie);
+    context.addToMustWatch(movie);
   };
   return (
-    <IconButton aria-label="add to playlist" onClick={onUserSelect}>
+    <IconButton aria-label="add to must watch" onClick={onUserSelect}>
       <PlaylistIcon color="primary" fontSize="large" />
     </IconButton>
   );
 };
 
-export default PlaylistAddIcon;
+export default MustWatchAddIcon;
