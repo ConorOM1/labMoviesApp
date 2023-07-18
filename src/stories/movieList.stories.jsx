@@ -4,7 +4,7 @@ import SampleMovie from "./sampleData";
 import { MemoryRouter } from "react-router";
 import { action } from "@storybook/addon-actions";
 import AddToFavouritesIcon from "../components/cardIcons/addToFavourites";
-import Grid from "@mui/material/Grid";
+import Grid from "@/material/Grid";
 import MoviesContextProvider from "../contexts/moviesContext";
 
 export default {
