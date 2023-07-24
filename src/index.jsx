@@ -7,6 +7,7 @@ import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
+import TVShowDetailsPage from  "./pages/tvShowDetailsPage.jsx"
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import NowPlayingMoviesPage from "./pages/nowPlayingMoviesPage";
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage";
@@ -45,6 +46,8 @@ const App = () => {
                 <Route path="/movies/nowplaying" element={<NowPlayingMoviesPage />} />
                 <Route path="/movies/toprated" element={<TopRatedMoviesPage />} />
                 <Route path="/tvshows" element={<TVShowsPage />} />
+                <Route path="/tvshow/:id" element={<TVShowDetailsPage />} />
+                <Route path="/tvreviews/:id" element={<TVShowsPage/>} />
               </Routes>
             </MoviesContextProvider>
           </TVShowsContextProvider>

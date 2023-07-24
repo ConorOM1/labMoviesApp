@@ -19,7 +19,7 @@ const styles = {
   },
 };
 
-const TemplateTVPage = ({ tvshow, children }) => {
+const TemplateTVShowPage = ({ tvshow, children }) => {
   const { data , error, isLoading, isError } = useQuery(
     ["images", { id: tvshow.id }],
     getTVShowImages

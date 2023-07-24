@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Header from "../headerMovieList";
-import FilterCard from "../filterTVShowsCard"; // Ensure this is correctly set up for TV Shows
 import Grid from "@mui/material/Grid";
 import Fab from "@mui/material/Fab";
 import Drawer from "@mui/material/Drawer";
-import TVShowList from "../tvShowList"; // Ensure you have a TV Show list component
+import TVShowList from "../tvShowList";
 
 const styles = {
   root: {
@@ -62,11 +61,6 @@ function TVShowListPageTemplate({ tvshows = [], title, action }) {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-        <FilterCard
-          onUserInput={handleChange}
-          titleFilter={titleFilter}
-          genreFilter={genreFilter}
-        />
       </Drawer>
     </>  
   );
