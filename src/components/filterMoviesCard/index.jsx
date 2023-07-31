@@ -21,7 +21,8 @@ const styles = {
   media: { height: 300 },
 
   formControl: {
-    margin: 1,
+    display: "block",
+    margin: 2,
     minWidth: 220,
     backgroundColor: "rgb(255, 255, 255)",
   },
@@ -53,6 +54,10 @@ export default function FilterMoviesCard(props) {
 
   const handleGenreChange = (e) => {
     handleUserImput(e, "genre", e.target.value);
+  };
+
+  const handleAverageVoteChange = (e) => {
+    handleUserImput(e, "average_vote", e.target.value);
   };
 
   return (
@@ -90,7 +95,29 @@ export default function FilterMoviesCard(props) {
               );
             })}
           </Select>
-        </FormControl>     
+        </FormControl>
+
+
+        <FormControl variant="filled" sx={styles.formControl}>
+            <InputLabel id="average-vote-label">Average Vote</InputLabel>
+            <Select
+              labelId="average-vote-label"
+              id="average vote"
+              value={props.averageVoteFilter}
+              onChange={handleAverageVoteChange}
+            >
+              <MenuItem value="0">All</MenuItem>
+              <MenuItem value="1"> 1+</MenuItem>
+              <MenuItem value="2"> 2+</MenuItem>
+              <MenuItem value="3"> 3+</MenuItem>
+              <MenuItem value="4"> 4+</MenuItem>
+              <MenuItem value="5"> 5+</MenuItem>
+              <MenuItem value="6"> 6+</MenuItem>
+              <MenuItem value="7"> 7+</MenuItem>
+              <MenuItem value="8"> 8+</MenuItem>
+              <MenuItem value="9"> 9+</MenuItem>
+            </Select>
+          </FormControl>     
       </CardContent>      
     </Card>
     <Card sx={styles.root} variant="outlined">

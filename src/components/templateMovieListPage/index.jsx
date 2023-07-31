@@ -21,21 +21,28 @@ const styles = {
 function MovieListPageTemplate({ movies = [], title, action }) {
   const [titleFilter, setTitleFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
+  const [averageVoteFilter, setAverageVoteFilter] = useState("0");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const genreId = Number(genreFilter);
-
+   
   let displayedMovies = movies
     .filter((m) => {
       return m.title.toLowerCase().search(titleFilter.toLowerCase()) !== -1;
     })
     .filter((m) => {
       return genreId > 0 ? m.genre_ids.includes(genreId) : true;
+    })
+    .filter((s) => {
+      return s.vote_average >= averageVoteFilter;
     });
+
 
   const handleChange = (type, value) => {
     if (type === "title") setTitleFilter(value);
-    else setGenreFilter(value);
+    else if (type === "genre") setGenreFilter(value);
+    else if (type === "average_vote") setAverageVoteFilter(value);
+
   };
 
   return (
@@ -66,7 +73,8 @@ function MovieListPageTemplate({ movies = [], title, action }) {
           onUserInput={handleChange}
           titleFilter={titleFilter}
           genreFilter={genreFilter}
-        />
+          averageVoteFilter={averageVoteFilter}   
+          />
       </Drawer>
     </>  
   );
