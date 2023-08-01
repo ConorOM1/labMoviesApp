@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; 
 import MovieForm from "../components/myFantasyMovieForm";
 import FantasyMovieList from "../components/myFantasyMovieList";
+import { useAuth } from "../authContext";
 
 const MyFantasyMoviePage = () => {
+  const { user } = useAuth(); 
   const [fantasyMovieData, setFantasyMovieData] = useState([]);
 
   const handleSubmit = (data) => {
