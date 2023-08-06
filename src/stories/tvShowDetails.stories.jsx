@@ -1,6 +1,6 @@
 import React from "react";
 import TVShowDetails from "../components/tvShowDetails";
-import SampleMovie from "./sampleData";
+import { SampleTVShow } from "./sampleData";
 import { MemoryRouter } from "react-router";
 import TVShowsContextProvider from "../contexts/tvshowsContext";
 
@@ -13,6 +13,6 @@ export default {
   ],
 };
 
-export const Basic = () => <TVShowsDetails tvshiw={SampleTVShow} />;
+export const Basic = () => <TVShowDetails tvshow={SampleTVShow} />;
 
 Basic.storyName = "Default";

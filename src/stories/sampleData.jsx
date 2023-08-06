@@ -1,5 +1,5 @@
 
-export default {
+export const SampleMovie = {
     adult: false,
     backdrop_path: "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
     belongs_to_collection: {
@@ -79,4 +79,66 @@ export default {
     vote_average: 7,
     vote_count: 9692,
   };
+
+  export const SampleTVShow = {
+    adult: true,
+    backdrop_path: null,
+    first_air_date: "2023-07-23",
+    genres: [
+      {
+      id: 14,
+      name: "Drama",
+    },
+  ],
+    homepage: "https://www.paramountplus.com/shows/special-ops-lioness/",
+    id: 2,
+    in_production: true,
+    languages: [],
+    last_air_date: "",
+    last_episode_to_air: {
+      air_date: "",
+      episode_number: 8,
+      id: 11,
+      name: "",
+      overview: "Cruz Manuelos, a rough-around-the-edges but passionate young Marine, is recruited to join the CIA’s Lioness Engagement Team to help bring down a terrorist organization from within. Joe, the station chief of the Lioness program, is tasked with training, managing and leading her female undercover operatives.",
+      production_code: "",
+      runtime: null,
+      season_number: 1,
+      show_id: 2,
+      still_path: null,
+      vote_average: 8.286,
+      vote_count: 103000,
+    },
+    name: "Special Ops: Lioness",
+    next_episode_to_air: null,
+    networks: [],
+    number_of_episodes: 8,
+    number_of_seasons: 1,
+    origin_country: ["USA"],
+    original_language: "",
+    original_name: "Special Ops: Lioness",
+    overview: "",
+    popularity: 0.0,
+    poster_path: "/rXCzevakJoAN1qnZY0nAQPSLVRv.jpg",
+    production_companies: [],
+    production_countries: [],
+    seasons: [
+      {
+        air_date: "2023-07-23",
+        episode_count: 8,
+        id: 11,
+        name: "",
+        overview: "",
+        poster_path: null,
+        season_number: 1,
+      },
+    ],
+    spoken_languages: ["English"],
+    status: "",
+    tagline: "",
+    type: "Scripted",
+    vote_average: 8.286,
+    vote_count: 103000,
+  };
+  
   
