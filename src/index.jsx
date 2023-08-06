@@ -20,6 +20,7 @@ import TVShowsContextProvider from './contexts/tvshowsContext';
 import FantasyMoviePage from './pages/myFantasyMoviePage.jsx';
 import PrivateRoute from './privateRoute';
 import { AuthProvider } from './authContext';
+import LoginPage from './pages/loginPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -52,6 +53,7 @@ const App = () => {
                   <Route path="/tvshows" element={<TVShowsPage />} />
                   <Route path="/tvshow/:id" element={<TVShowDetailsPage />} />
                   <Route path="/tvreviews/:id" element={<TVShowsPage/>} />
+                  <Route path="/login" element={<LoginPage />} />
                   <Route path="/fantasy" element={<PrivateRoute><FantasyMoviePage/></PrivateRoute>} />
                 </Routes>
               </MoviesContextProvider>
